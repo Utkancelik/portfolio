@@ -1,0 +1,475 @@
+/* ========================================
+   UTKAN ÇELIK - GAME DEVELOPER CV
+   A4 Print-Ready Stylesheet
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #6C63FF;
+    --primary-dark: #4F46E5;
+    --accent: #10B981;
+    --dark: #0F172A;
+    --dark-soft: #1E293B;
+    --text: #E2E8F0;
+    --text-muted: #94A3B8;
+    --text-dark: #1E293B;
+    --text-dark-muted: #475569;
+    --border: #334155;
+    --bg-light: #F8FAFC;
+    --sidebar-bg: #0F172A;
+    --sidebar-text: #E2E8F0;
+    --sidebar-muted: #94A3B8;
+    --main-bg: #FFFFFF;
+    --main-text: #1E293B;
+    --main-muted: #64748B;
+    --tag-bg: rgba(108, 99, 255, 0.1);
+    --tag-text: #6C63FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--main-text);
+    background: #E2E8F0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* A4 Page Container */
+.cv-page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background: var(--main-bg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 72mm 1fr;
+    overflow: hidden;
+}
+
+/* ---- SIDEBAR ---- */
+.sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-section {
+    text-align: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1px;
+}
+
+.profile-name {
+    font-size: 16pt;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.profile-title {
+    font-size: 8.5pt;
+    color: var(--primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-section {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-section:last-child {
+    border-bottom: none;
+}
+
+.sidebar-heading {
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Contact */
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 8pt;
+    color: var(--sidebar-muted);
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.contact-item a {
+    color: var(--sidebar-text);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--primary);
+}
+
+/* Skills */
+.skill-category {
+    margin-bottom: 10px;
+}
+
+.skill-category:last-child {
+    margin-bottom: 0;
+}
+
+.skill-category-title {
+    font-size: 8pt;
+    font-weight: 600;
+    color: var(--sidebar-text);
+    margin-bottom: 5px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.skill-tag {
+    background: rgba(108, 99, 255, 0.15);
+    color: #A5B4FC;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 7.5pt;
+    font-weight: 500;
+}
+
+.skill-tag.highlight {
+    background: var(--primary);
+    color: white;
+}
+
+/* Languages */
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 8.5pt;
+}
+
+.language-name {
+    font-weight: 500;
+}
+
+.language-level {
+    font-size: 7.5pt;
+    color: var(--sidebar-muted);
+}
+
+/* Certifications */
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 0;
+    font-size: 8pt;
+    color: var(--sidebar-muted);
+}
+
+.cert-badge {
+    color: var(--accent);
+    font-size: 10px;
+}
+
+/* ---- MAIN CONTENT ---- */
+.main-content {
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.section {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.section-heading {
+    font-size: 10pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-heading::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-dark), transparent);
+    border-radius: 1px;
+}
+
+/* Summary */
+.summary-text {
+    font-size: 9pt;
+    line-height: 1.65;
+    color: var(--main-muted);
+}
+
+/* Experience */
+.exp-item {
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.exp-item:last-child {
+    margin-bottom: 0;
+}
+
+.exp-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.exp-role {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--main-text);
+}
+
+.exp-date {
+    font-size: 7.5pt;
+    color: var(--main-muted);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.exp-company {
+    font-size: 8.5pt;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.exp-desc {
+    font-size: 8.5pt;
+    color: var(--main-muted);
+    line-height: 1.55;
+}
+
+.exp-desc li {
+    margin-bottom: 2px;
+    margin-left: 12px;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.project-card {
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 10px 12px;
+    transition: border-color 0.2s;
+}
+
+.project-name {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--main-text);
+    margin-bottom: 2px;
+}
+
+.project-tech {
+    font-size: 7pt;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.project-desc {
+    font-size: 8pt;
+    color: var(--main-muted);
+    line-height: 1.5;
+}
+
+.project-link {
+    font-size: 7pt;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Education */
+.edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4px 0;
+}
+
+.edu-info {
+    flex: 1;
+}
+
+.edu-school {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--main-text);
+}
+
+.edu-degree {
+    font-size: 8.5pt;
+    color: var(--main-muted);
+}
+
+.edu-date {
+    font-size: 7.5pt;
+    color: var(--main-muted);
+    font-weight: 500;
+}
+
+/* Awards */
+.award-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.award-icon {
+    font-size: 14px;
+}
+
+.award-info {
+    flex: 1;
+}
+
+.award-title {
+    font-size: 9pt;
+    font-weight: 600;
+    color: var(--main-text);
+}
+
+.award-detail {
+    font-size: 7.5pt;
+    color: var(--main-muted);
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .cv-page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .skill-tag {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .skill-tag.highlight {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .exp-item::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* Screen-only helper for centering */
+@media screen {
+    body {
+        padding: 20px 0;
+    }
+}
