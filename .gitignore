@@ -2,3 +2,10 @@
 *.swp
 *.swo
 *~
+
+# Private interview data — never publish
+NOTES_metrics_private.md
+.tmp_inspect/
+
+# Local tooling
+.claude/

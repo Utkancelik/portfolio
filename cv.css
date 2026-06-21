@@ -224,14 +224,14 @@ body {
 
 /* ---- MAIN CONTENT ---- */
 .main-content {
-    padding: 28px 26px;
+    padding: 12px 26px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 6px;
 }
 
 .section {
-    padding-bottom: 16px;
+    padding-bottom: 4px;
     border-bottom: 1px solid #E2E8F0;
 }
 
@@ -246,7 +246,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--primary-dark);
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -263,13 +263,13 @@ body {
 /* Summary */
 .summary-text {
     font-size: 9pt;
-    line-height: 1.65;
+    line-height: 1.5;
     color: var(--main-muted);
 }
 
 /* Experience */
 .exp-item {
-    margin-bottom: 14px;
+    margin-bottom: 3px;
     position: relative;
     padding-left: 14px;
 }
@@ -313,17 +313,17 @@ body {
     font-size: 8.5pt;
     color: var(--primary-dark);
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .exp-desc {
     font-size: 8.5pt;
     color: var(--main-muted);
-    line-height: 1.55;
+    line-height: 1.4;
 }
 
 .exp-desc li {
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     margin-left: 12px;
 }
 
@@ -331,13 +331,13 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
 }
 
 .project-card {
     border: 1px solid #E2E8F0;
     border-radius: 6px;
-    padding: 10px 12px;
+    padding: 8px 11px;
     transition: border-color 0.2s;
 }
 
