@@ -76,6 +76,26 @@ const GAMES = [
         ]
     },
     {
+        id: 'softy-drop',
+        name: 'Softy Drop',
+        featured: false,
+        icon: 'assets/images/icons/softy-drop.jpg',
+        accent: '251, 191, 36',            // yellow
+        role: 'Developer',
+        studio: 'Brew Games',
+        genre: 'Casual · Puzzle',
+        tags: ['Unity', 'C#', 'iOS', 'Live'],
+        blurb: 'A match-3 puzzle game I built end-to-end as my final internship project — from first prototype through to App Store release and live metric testing for publishing evaluation.',
+        highlights: ['Match-3 core', 'Combo system', 'Shipped solo'],
+        appStore: 'https://apps.apple.com/us/app/softy-drop/id6677052121',
+        screenshots: [
+            'assets/images/screens/softy-4.jpg',
+            'assets/images/screens/softy-1.jpg',
+            'assets/images/screens/softy-3.jpg',
+            'assets/images/screens/softy-2.jpg'
+        ]
+    },
+    {
         id: 'ufobeam',
         name: '@ufobeam',
         featured: false,
@@ -84,6 +104,64 @@ const GAMES = [
         studio: 'Moralabs · Internship',
         tags: ['Unity', 'C#', 'Team Project'],
         blurb: 'A team-based UFO game built during my internship at Moralabs — my first taste of professional, cross-functional game development workflows.'
+    }
+];
+
+/* ========================================
+   CONTRIBUTIONS
+   Titles I supported on other teams — marketing
+   creative work and additional gameplay dev.
+   ======================================== */
+const CONTRIBUTIONS = [
+    {
+        id: 'fall-of-the-ages',
+        name: 'Fall of the Ages',
+        icon: 'assets/images/icons/fall-of-the-ages.jpg',
+        studio: 'Brew Games',
+        genre: 'Strategy',
+        roles: [{ label: 'Game Developer', dev: true }, { label: 'Marketing Creatives' }],
+        note: 'Worked on the team as a game developer building gameplay features, alongside marketing creative work for the title.',
+        appStore: 'https://apps.apple.com/tr/app/fall-of-the-ages/id6756562405'
+    },
+    {
+        id: 'battle-bag',
+        name: 'Battle Bag: War Zone',
+        icon: 'assets/images/icons/battle-bag.jpg',
+        studio: 'Voodoo',
+        genre: 'Strategy · Puzzle',
+        roles: [{ label: 'Game Developer', dev: true }, { label: 'Marketing Creatives' }],
+        note: 'Worked across both sides of the title — a month on core gameplay development, alongside a longer run of marketing ad mechanics.',
+        appStore: 'https://apps.apple.com/us/app/battle-bag-war-zone/id6746075769'
+    },
+    {
+        id: 'drop-away',
+        name: 'Drop Away: Color Puzzle',
+        icon: 'assets/images/icons/drop-away.jpg',
+        studio: 'Rollic Games',
+        genre: 'Puzzle',
+        roles: [{ label: 'Marketing Game Developer' }],
+        note: "Designed and built a large volume of watch-only marketing creative mechanics driving the title's user acquisition campaigns.",
+        appStore: 'https://apps.apple.com/us/app/drop-away-color-puzzle/id6648791704'
+    },
+    {
+        id: 'miner-tycoon',
+        name: 'Miner Tycoon: Big Dynamite',
+        icon: 'assets/images/icons/miner-tycoon.jpg',
+        studio: 'Brew Games',
+        genre: 'Simulation',
+        roles: [{ label: 'Marketing Creatives' }],
+        note: "Developed marketing creatives and ad mechanics for one of the studio's longest-running simulation titles.",
+        appStore: 'https://apps.apple.com/tr/app/miner-tycoon-big-dynamite/id1624886117'
+    },
+    {
+        id: 'shopping-mall',
+        name: 'Shopping Mall 3D',
+        icon: 'assets/images/icons/shopping-mall.jpg',
+        studio: 'Brew Games',
+        genre: 'Simulation',
+        roles: [{ label: 'Marketing Creatives' }],
+        note: 'Created marketing creatives for the title while it was a Brew Games property, translating its core loop into short, high-retention ad moments. The game was later acquired by Sunday.gg.',
+        appStore: 'https://apps.apple.com/us/app/shopping-mall-3d/id1603053025'
     }
 ];
 
@@ -197,6 +275,34 @@ function miniCardMarkup(g, delay) {
             <div class="game-card__tags">${tags}</div>
         </div>
     </article>`;
+}
+
+/* ========================================
+   RENDER CONTRIBUTIONS
+   ======================================== */
+function renderContributions() {
+    const container = document.getElementById('contribContainer');
+    if (!container) return;
+
+    container.innerHTML = CONTRIBUTIONS.map((c, i) => {
+        const roles = c.roles
+            .map(r => `<span class="contrib-role-tag${r.dev ? ' dev' : ''}">${r.label}</span>`)
+            .join('');
+        return `
+        <a class="contrib-card reveal reveal-delay-${(i % 3) + 1}" href="${c.appStore}"
+            target="_blank" rel="noopener noreferrer">
+            <div class="contrib-icon">
+                <img src="${c.icon}" alt="${c.name} app icon" width="62" height="62" loading="lazy">
+            </div>
+            <div class="contrib-body">
+                <div class="contrib-name">${c.name}</div>
+                <div class="contrib-publisher">${c.studio} · ${c.genre}</div>
+                <p class="contrib-note">${c.note}</p>
+                <div class="contrib-roles">${roles}</div>
+            </div>
+            <span class="contrib-arrow" aria-hidden="true">↗</span>
+        </a>`;
+    }).join('');
 }
 
 /* ========================================
@@ -574,6 +680,7 @@ function initSmoothScroll() {
    ======================================== */
 document.addEventListener('DOMContentLoaded', () => {
     renderGames();        // build cards first so the rest can wire to them
+    renderContributions();
     initCarousels();
     initLightbox();
     initParticleCanvas();

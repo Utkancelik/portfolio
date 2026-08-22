@@ -1554,11 +1554,11 @@ ul {
    ======================================== */
 
 @media (max-width: 1024px) {
-    .games-row {
+    .contrib-grid {
         grid-template-columns: 1fr;
     }
 
-    .contrib-grid {
+    .games-row {
         grid-template-columns: 1fr;
     }
 
@@ -1634,22 +1634,6 @@ ul {
 
     .skills-grid {
         grid-template-columns: 1fr;
-    }
-
-    .contrib-block {
-        margin-top: 56px;
-        padding-top: 44px;
-    }
-
-    .contrib-card {
-        padding: 16px;
-        gap: 14px;
-    }
-
-    .contrib-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 12px;
     }
 
     .about-highlights {
