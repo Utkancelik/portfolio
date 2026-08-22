@@ -836,6 +836,144 @@ ul {
 }
 
 /* ========================================
+   ADDITIONAL CONTRIBUTIONS
+   ======================================== */
+.contrib-block {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.contrib-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+
+.contrib-title {
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin-bottom: 12px;
+}
+
+.contrib-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.contrib-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 18px;
+}
+
+.contrib-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.contrib-card:hover {
+    transform: translateY(-4px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-hover);
+}
+
+.contrib-icon {
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-secondary);
+}
+
+.contrib-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.contrib-card:hover .contrib-icon img {
+    transform: scale(1.06);
+}
+
+.contrib-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.contrib-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 2px;
+}
+
+.contrib-publisher {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.contrib-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.contrib-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.contrib-role-tag {
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--neon-blue);
+}
+
+.contrib-role-tag.dev {
+    background: rgba(108, 99, 255, 0.12);
+    color: var(--accent-secondary);
+}
+
+.contrib-arrow {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    transition: var(--transition-fast);
+}
+
+.contrib-card:hover .contrib-arrow {
+    color: var(--accent-primary);
+    transform: translate(2px, -2px);
+}
+
+/* ========================================
    EXPERIENCE SECTION
    ======================================== */
 #experience {
@@ -927,6 +1065,20 @@ ul {
     color: var(--accent-secondary);
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+.worktype-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 9px;
+    background: rgba(148, 163, 184, 0.1);
+    color: var(--text-muted);
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    vertical-align: 1px;
 }
 
 .timeline-desc {
@@ -1406,6 +1558,10 @@ ul {
         grid-template-columns: 1fr;
     }
 
+    .contrib-grid {
+        grid-template-columns: 1fr;
+    }
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1478,6 +1634,22 @@ ul {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contrib-block {
+        margin-top: 56px;
+        padding-top: 44px;
+    }
+
+    .contrib-card {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .contrib-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
     }
 
     .about-highlights {
