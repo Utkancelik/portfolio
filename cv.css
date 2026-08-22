@@ -399,6 +399,13 @@ body {
     white-space: nowrap;
 }
 
+.contrib-dl {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
 .contrib-role {
     margin-left: auto;
     font-size: 7.5pt;

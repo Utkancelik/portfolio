@@ -130,6 +130,7 @@ const CONTRIBUTIONS = [
         studio: 'Voodoo',
         genre: 'Strategy · Puzzle',
         roles: [{ label: 'Game Developer', dev: true }, { label: 'Marketing Creatives' }],
+        downloads: '3M+',
         note: 'Worked across both sides of the title — a month on core gameplay development, alongside a longer run of marketing ad mechanics.',
         appStore: 'https://apps.apple.com/us/app/battle-bag-war-zone/id6746075769'
     },
@@ -140,6 +141,7 @@ const CONTRIBUTIONS = [
         studio: 'Rollic Games',
         genre: 'Puzzle',
         roles: [{ label: 'Marketing Game Developer' }],
+        downloads: '5M+',
         note: "Designed and built a large volume of watch-only marketing creative mechanics driving the title's user acquisition campaigns.",
         appStore: 'https://apps.apple.com/us/app/drop-away-color-puzzle/id6648791704'
     },
@@ -150,6 +152,7 @@ const CONTRIBUTIONS = [
         studio: 'Brew Games',
         genre: 'Simulation',
         roles: [{ label: 'Marketing Creatives' }],
+        downloads: '1M+',
         note: "Developed marketing creatives and ad mechanics for one of the studio's longest-running simulation titles.",
         appStore: 'https://apps.apple.com/tr/app/miner-tycoon-big-dynamite/id1624886117'
     },
@@ -160,6 +163,7 @@ const CONTRIBUTIONS = [
         studio: 'Brew Games',
         genre: 'Simulation',
         roles: [{ label: 'Marketing Creatives' }],
+        downloads: '10M+',
         note: 'Created marketing creatives for the title while it was a Brew Games property, translating its core loop into short, high-retention ad moments. The game was later acquired by Sunday.gg.',
         appStore: 'https://apps.apple.com/us/app/shopping-mall-3d/id1603053025'
     }
@@ -288,6 +292,9 @@ function renderContributions() {
         const roles = c.roles
             .map(r => `<span class="contrib-role-tag${r.dev ? ' dev' : ''}">${r.label}</span>`)
             .join('');
+        const dl = c.downloads
+            ? `<span class="contrib-dl">↓ ${c.downloads} downloads</span>`
+            : '';
         return `
         <a class="contrib-card reveal reveal-delay-${(i % 3) + 1}" href="${c.appStore}"
             target="_blank" rel="noopener noreferrer">
@@ -298,7 +305,7 @@ function renderContributions() {
                 <div class="contrib-name">${c.name}</div>
                 <div class="contrib-publisher">${c.studio} · ${c.genre}</div>
                 <p class="contrib-note">${c.note}</p>
-                <div class="contrib-roles">${roles}</div>
+                <div class="contrib-roles">${dl}${roles}</div>
             </div>
             <span class="contrib-arrow" aria-hidden="true">↗</span>
         </a>`;
