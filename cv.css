@@ -224,14 +224,14 @@ body {
 
 /* ---- MAIN CONTENT ---- */
 .main-content {
-    padding: 28px 26px;
+    padding: 24px 26px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 11px;
 }
 
 .section {
-    padding-bottom: 16px;
+    padding-bottom: 9px;
     border-bottom: 1px solid #E2E8F0;
 }
 
@@ -246,7 +246,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--primary-dark);
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -263,15 +263,15 @@ body {
 /* Summary */
 .summary-text {
     font-size: 9pt;
-    line-height: 1.65;
+    line-height: 1.6;
     color: var(--main-muted);
 }
 
 /* Experience */
 .exp-item {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     position: relative;
-    padding-left: 14px;
+    padding-left: 13px;
 }
 
 .exp-item:last-child {
@@ -319,109 +319,157 @@ body {
 .exp-desc {
     font-size: 8.5pt;
     color: var(--main-muted);
-    line-height: 1.55;
+    line-height: 1.45;
 }
 
 .exp-desc li {
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     margin-left: 12px;
 }
 
-/* Projects */
-.projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.project-card {
-    border: 1px solid #E2E8F0;
-    border-radius: 6px;
-    padding: 10px 12px;
-    transition: border-color 0.2s;
-}
-
-.project-name {
-    font-size: 9pt;
-    font-weight: 700;
-    color: var(--main-text);
-    margin-bottom: 2px;
-}
-
-.project-tech {
-    font-size: 7pt;
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.project-desc {
+/* Grouped company: sub-roles under one employer */
+.exp-role-note {
     font-size: 8pt;
-    color: var(--main-muted);
-    line-height: 1.5;
-}
-
-.project-link {
-    font-size: 7pt;
-    color: var(--primary);
-    text-decoration: none;
     font-weight: 600;
+    color: var(--primary-dark);
 }
 
-/* Education */
-.edu-item {
+.exp-subrole {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 4px 0;
+    margin-top: 4px;
 }
 
-.edu-info {
-    flex: 1;
-}
-
-.edu-school {
-    font-size: 9.5pt;
-    font-weight: 700;
-    color: var(--main-text);
-}
-
-.edu-degree {
+.exp-subrole-title {
     font-size: 8.5pt;
-    color: var(--main-muted);
+    font-weight: 700;
+    color: var(--primary-dark);
 }
 
-.edu-date {
-    font-size: 7.5pt;
+.work-type {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 0 5px;
+    border-radius: 3px;
+    background: rgba(108, 99, 255, 0.12);
+    color: var(--primary);
+    font-size: 6.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: 1px;
+}
+
+.exp-subrole-date {
+    font-size: 7pt;
     color: var(--main-muted);
     font-weight: 500;
+    white-space: nowrap;
 }
 
-/* Awards */
-.award-item {
+/* Additional Contributions */
+.contrib-list {
+    list-style: none;
+}
+
+.contrib-row {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 4px 0;
+    align-items: baseline;
+    gap: 6px;
+    padding: 2px 0;
+    font-size: 8pt;
+    line-height: 1.45;
 }
 
-.award-icon {
-    font-size: 14px;
+.contrib-row + .contrib-row {
+    border-top: 1px solid #F1F5F9;
 }
 
-.award-info {
+.contrib-game {
+    font-weight: 700;
+    color: var(--main-text);
+    white-space: nowrap;
+}
+
+.contrib-pub {
+    font-size: 7pt;
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.contrib-role {
+    margin-left: auto;
+    font-size: 7.5pt;
+    color: var(--main-muted);
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Games list */
+.games-group-label {
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--main-text);
+    margin: 7px 0 3px;
+}
+
+.games-group-label:first-of-type {
+    margin-top: 0;
+}
+
+/* Education (sidebar) */
+.edu-side-school {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--sidebar-text);
+}
+
+.edu-side-degree {
+    font-size: 7.5pt;
+    color: var(--sidebar-muted);
+    line-height: 1.4;
+    margin: 1px 0 2px;
+}
+
+.edu-side-date {
+    font-size: 7pt;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Awards (sidebar) */
+.award-side {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 3px 0;
+}
+
+.award-side-icon {
+    font-size: 11px;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
+
+.award-side-info {
     flex: 1;
 }
 
-.award-title {
-    font-size: 9pt;
+.award-side-title {
+    font-size: 8pt;
     font-weight: 600;
-    color: var(--main-text);
+    color: var(--sidebar-text);
+    line-height: 1.35;
 }
 
-.award-detail {
-    font-size: 7.5pt;
-    color: var(--main-muted);
+.award-side-detail {
+    font-size: 7pt;
+    color: var(--sidebar-muted);
+    line-height: 1.35;
 }
 
 /* ========================================
@@ -462,6 +510,11 @@ body {
     }
 
     .exp-item::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .work-type {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
